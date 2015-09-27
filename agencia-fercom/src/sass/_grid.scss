@@ -1,0 +1,72 @@
+//
+// Grid
+//
+
+.container-full {
+  padding: {
+    left: $grid-gutter-width / 2;
+    right: $grid-gutter-width / 2;
+  };
+  margin : {
+    left: auto;
+    right: auto;
+  };
+}
+
+.container {
+  @extend .container-full;
+
+  @include media($screen-tablet) {
+    width: 90%;
+  }
+
+  @include media($screen-desktop) {
+    width: 960px;
+  }
+
+  @include media($screen-lg-desktop) {
+    width: 1200px;
+  }
+}
+
+
+// row
+//
+.row {
+  @extend %make-row;
+}
+
+// columns
+//
+.column,
+[class*="col-"] {
+  @extend %column;
+}
+
+// Make a grid ;)
+//
+@include make-grid();
+@include make-grid-pull();
+@include make-grid-push();
+@include make-grid-offset();
+
+@include media(min-width $screen-tablet) {
+  @include make-grid('-tablet-');
+  @include make-grid-pull('-tablet-');
+  @include make-grid-push('-tablet-');
+  @include make-grid-offset('-tablet-');
+}
+
+@include media(min-width $screen-desktop) {
+  @include make-grid('-desktop-');
+  @include make-grid-pull('-desktop-');
+  @include make-grid-push('-desktop-');
+  @include make-grid-offset('-desktop-');
+}
+
+@include media(min-width $screen-lg-desktop) {
+  @include make-grid('-desktop-lg-');
+  @include make-grid-pull('-desktop-lg-');
+  @include make-grid-push('-desktop-lg-');
+  @include make-grid-offset('-desktop-lg-');
+}
