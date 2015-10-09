@@ -42,7 +42,7 @@ hr.divider {
 .rounded { @include border-radius(4px); }
 
 .map {
-  background: url('/assets/images/map.png') no-repeat 50% 50% fixed;
+  background: url('../images/map.png') no-repeat 50% 50% fixed;
   @extend %clearfix;
   height: 350px;
   width: 100%;
@@ -118,3 +118,15 @@ hr.divider {
 .p-l-lg { padding-left:  em($grid-gutter-width*2) !important; }
 .p-x-lg { padding-right: em($grid-gutter-width*2) !important; padding-left:  em($grid-gutter-width*2) !important; }
 .p-y-lg { padding-top:   em($grid-gutter-width*2) !important; padding-bottom:em($grid-gutter-width*2) !important; }
+
+//
+// Compass sprites
+@import "compass/utilities/sprites";
+@import "i/*.png";
+$i-sprite-dimensions: true;
+@include all-i-sprites;
+
+.i-sprite {
+  display: inline-block;
+  text-indent: -9999px;
+}

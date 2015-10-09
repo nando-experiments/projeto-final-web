@@ -89,13 +89,3 @@ figure {
 figcaption {
   @include font-size($font-size-base - 3);
 }
-
-@import "compass/utilities/sprites";
-@import "i/*.png";
-$i-sprite-dimensions: true;
-@include all-i-sprites;
-
-.i-sprite {
-  display: inline-block;
-  text-indent: -9999px;
-}

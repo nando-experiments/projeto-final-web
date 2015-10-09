@@ -3,7 +3,7 @@
 //
 
 .banner {
-  background: url("/assets/images/banner.jpg") no-repeat top center;
+  background: no-repeat top center;
   @include background-size(cover);
   position: relative;
   display: table;

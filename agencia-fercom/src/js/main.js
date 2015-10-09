@@ -1,4 +1,3 @@
-
 //= include ../bower/jquery/dist/jquery.min.js
 //= include ../bower/wow/dist/wow.min.js
 
@@ -7,11 +6,11 @@
 
 //= include components/scrolltoo.js
 
-$('a[href^="#"]').scrolltoo();
+$(document).ready(function() {
+  $('a[href^="#"]').scrolltoo();
 
-var $header = $('.header');
+  var $header = $('.header');
 
-$(document).ready(function(){
   $(window).bind('scroll', function() {
     var navHeight = $(window).height() - 70;
     if ($(window).scrollTop() > 0) {
@@ -23,11 +22,11 @@ $(document).ready(function(){
 });
 
 wow = new WOW({
-  boxClass     : 'wow',
-  animateClass : 'animated',
-  offset       : 0,
-  mobile       : true,
-  live         : true
+  boxClass: 'wow',
+  animateClass: 'animated',
+  offset: 0,
+  mobile: true,
+  live: true
 });
 
 wow.init();
